@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="name.btjproject.crm.settings.dao.DicTypeDao">
+<!--    <sql id="">-->
+<!--        -->
+<!--    </sql>-->
+<!--    <select id="" resultType="">-->
+<!--        <include refid=""/>-->
+<!--        <where>-->
+<!--            <if test="">-->
+<!--                -->
+<!--            </if>-->
+<!--        </where>-->
+<!--    </select>-->
+<!--    <select id="" resultType="">-->
+<!--        <include refid=""/>-->
+<!--        <foreach collection="" item="" open="" close="" separator="">-->
+<!--           -->
+<!--        </foreach>-->
+<!--    </select>-->
+<!--    <resultMap id="" type="">-->
+<!--        <id column="" property=""/>-->
+<!--        <result column="" property=""/>-->
+<!--        <result column="" property=""/>-->
+<!--        <result column="" property=""/>-->
+<!--        <result column="" property=""/>-->
+<!--        <result column="" property=""/>-->
+<!--        <result column="" property=""/>-->
+<!--        <result column="" property=""/>-->
+<!--    </resultMap>-->
+<!--    <select id="" resultType="" resultMap="">-->
+<!--        <include refid=""/>-->
+<!--    </select>-->
+    <select id="getDicType" resultType="DicType">
+        select code, name, description from tbl_dic_type
+    </select>
+</mapper>

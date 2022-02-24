@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <properties resource="jdbc.properties"/>
+    <typeAliases>
+        <package name="name.btjproject.crm.settings.domain"/>
+        <package name="name.btjproject.crm.workbench.domain"/>
+<!--        <typeAlias type="" alias=""/>-->
+    </typeAliases>
+<!--    <plugins>-->
+<!--        <plugin interceptor="com.github.pagehelper.PageInterceptor"/>-->
+<!--    </plugins>-->
+    <environments default="crm">
+        <environment id="crm">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <package name="name/btjproject/crm/settings/dao"/>
+        <package name="name/btjproject/crm/workbench/dao"/>
+    </mappers>
+</configuration>
